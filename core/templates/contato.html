@@ -1,0 +1,54 @@
+{% load static %}
+
+<div id="contact" class="request">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Request a Call back</h2>
+                     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>
+                     incididunt ut labore et dolore magna</span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="black_bg">
+                     <div class="row">
+                        <div class="col-md-7 ">
+                           <form id="contato" method="post" action="{% url 'index' %}">
+                              {% csrf_token %}
+
+                              <div class="row">
+                                 <div class="col-md-12 ">
+                                    <input  class="contactus" id="nome" placeholder="Nome" type="text" name="nome">
+                                 </div>
+                                 <div class="col-md-12">
+                                    <input class="contactus" id="telefone" placeholder="Numero de telefone" type="text" name="Numero de Telefone">
+                                 </div>
+                                  <div class="col-md-12">
+                                    <input class="contactus" id="assunto" placeholder="assunto" type="text" name="assunto">
+                                 </div>
+                                 <div class="col-md-12">
+                                    <input class="contactus" id="email" placeholder="Email" type="text" name="Email">
+                                 </div>
+                                 <div class="col-md-12">
+                                    <textarea class="textarea" id="messagem" placeholder="Message" rows="7" name="Messagem "> Mensagem </textarea>
+                                 </div>
+                                 <div class="col-sm-12">
+                                    <button class="send_btn">Enviar</button>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                        <div class="col-md-5">
+                           <div class="mane_img">
+                              <figure><img src="{% static 'images/AcerNitro.jpg' %}" alt="#"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>

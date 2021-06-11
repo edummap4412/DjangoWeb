@@ -1,0 +1,28 @@
+{% load static %}
+
+<div id="" class="best">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Os melhores Preços para Upgrade  </h2>
+                     <span>Os melhores produtos aqui.</span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               {% for p in produto %}
+               <div class="col-md-4">
+                  <div class="best_box">
+                     <h4>{{ p.nome }} <br>Micro SD Card</h4>
+                     <p>{{ p.descricao }}</p>
+                  </div>
+               </div>
+               {% endfor %}
+
+               <div class="col-md-12">
+                  <a class="read_more" href="{% url 'leiamais' %}">Read more</a>
+               </div>
+            </div>
+         </div>
+      </div>
